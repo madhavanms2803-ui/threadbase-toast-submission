@@ -10,11 +10,10 @@ export default function LoginForm() {
 
   const mutation = useMutation({
     mutationFn: login,
-    onSuccess: () => showToast("Welcome back!", "success"),
-    onError: (error) => {
-      const message = error.response?.data?.message || "Login failed. Please try again.";
-      showToast(message, "error");
-    },
+    // TODO (Task 3): on success, fire a success toast (e.g. "Welcome back!")
+    onSuccess: () => {},
+    // TODO (Task 3): on error, read error.response?.data?.message and fire an error toast
+    onError: () => {},
   });
 
   function handleSubmit(e) {
